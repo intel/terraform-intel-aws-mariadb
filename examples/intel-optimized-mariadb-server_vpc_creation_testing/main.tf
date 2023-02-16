@@ -16,23 +16,21 @@ module "vpc" {
 
 
   tags = {
-    Owner    = "Intel.Cloud.Optimization.Modules@intel.com"
+    Owner    = "Intel Cloud Optimization Modules for Terraform"
     Duration = "4"
   }
 }
 
 module "optimized-mariadb-server" {
   source               = "intel/aws-mariadb/intel"
-  version              = "~> 1.0.2"
-  rds_identifier       = "mariadb-dev"
-  db_password          = var.db_password
-  multi_az             = false
-  vpc_id               = module.vpc.vpc_id
-  create_subnet_group  = false
-  db_subnet_group_name = "intel-2-test-db-subnet-group"
+  version              = "~> 1.0.0"
+  rds_identifier = "mariadb-dev"
+  db_password    = var.db_password
+  multi_az       = false
+  vpc_id         = module.vpc.vpc_id
   db_tags = {
-    Owner    = "Intel.Cloud.Optimization.Modules@intel.com"
-    Duration = "4"
+    Owner    = "Intel Cloud Optimization Modules for Terraform"
+    Duration = "1"
   }
   ingress_cidr_blocks = ["10.10.1.0/24"]
 }
