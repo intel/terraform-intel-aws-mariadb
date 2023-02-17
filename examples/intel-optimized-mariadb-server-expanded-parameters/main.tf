@@ -4,7 +4,7 @@
 
 # Provision Intel Optimized AWS MariaDB server
 module "optimized-mariadb-server" {
-  source         = "github.com/intel/terraform-intel-aws-mariadb"
+  source         = "intel/aws-mariadb/intel"
   db_password    = var.db_password
   rds_identifier =  "<NAME-FOR-RDS-INSTANCE>"
   db_parameters = {
