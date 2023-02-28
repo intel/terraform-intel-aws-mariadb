@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://github.com/OTCShare2/terraform-intel-aws-mariadb/blob/kjbleckm-mariadb/images/logo-classicblue-800px.png" alt="Intel Logo" width="250"/>
 </p>
@@ -6,7 +7,7 @@
 
 © Copyright 2022, Intel Corporation
 
-## AWS RDS MariaDB module - Intel Optimized MariaDB Server Example
+## AWS RDS MariaDB module - Intel Optimized MariaDB Server Read Replica Example
 
 Configuration in this directory creates an Amazon RDS instance for MariaDB. The instance is created on an Intel Icelake instance M6i.xlarge by default. The instance is pre-configured with parameters within the database parameter group that is optimized for Intel architecture. The goal of this module is to get you started with a database configured to run best on Intel architecture.
 
@@ -15,9 +16,6 @@ As you configure your application's environment, choose the configurations for y
 The MariaDB Optimizations were based off [Intel Xeon Tunning guides](<https://www.intel.com/content/www/us/en/developer/articles/guide/open-source-database-tuning-guide-on-xeon-systems.html>)
 
 ## Usage
-
-**See examples folder for complete examples.**
-
 
 By default, you will only have to pass three variables
 ```hcl
@@ -39,13 +37,15 @@ main.tf
 ```hcl
 module "optimized-mariadb-server" {
   source         = "intel/aws-mariadb/intel"
+  rds_identifier = "mariadb-dev"
   db_password    = var.db_password
-  rds_identifier = "<NAME-FOR-RDS-INSTANCE>"
-  # Update the vpc_id below for the VPC that this module will use. Find the vpc-id in your AWS account
+
+  # Update the vpc_id below for the VPC that this module will use. Find the default vpc-id in your AWS account
   # from the AWS console or using CLI commands. In your AWS account, the vpc-id is represented as "vpc-",
   # followed by a set of alphanumeric characters. One sample representation of a vpc-id is vpc-0a6734z932p20c2m4
-  vpc_id = "<YOUR-VPC-ID-HERE>"
+  vpc_id = "vpc-5ea60f23"
 }
+
 ```
 
 Run terraform
