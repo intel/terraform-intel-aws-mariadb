@@ -14,3 +14,14 @@ module "optimized-mariadb-server" {
   vpc_id = "YOUR-VPC-ID-HERE"
 }
 
+module "optimized-mariadb-server-read-replica" {
+  source         = "intel/aws-mariadb/intel"
+  rds_identifier = "mariadb-dev-replica"
+  db_password    = var.db_password
+
+  # Update the vpc-id below. Use the same vpc-id as the one used in the prior module.
+  vpc_id                           = "<ENTER VPC_ID HERE>"
+  aws_database_instance_identifier = "mariadb-rr"
+  db_replicate_source_db           = module.optimized-mysql-server.db_instance_id
+  kms_key_id                       = module.optimized-mysql-server.db_kms_key_id
+}
