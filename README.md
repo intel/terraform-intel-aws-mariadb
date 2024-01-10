@@ -12,7 +12,7 @@ Configuration in this directory creates an Amazon RDS instance for MariaDB. The 
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements.
 
-The MariaDB Optimizations were based off [Intel Xeon Tunning guides](<https://www.intel.com/content/www/us/en/developer/articles/guide/open-source-database-tuning-guide-on-xeon-systems.html>)
+The MariaDB Optimizations were based off [Intel Xeon Tuning guides](<https://www.intel.com/content/www/us/en/developer/articles/guide/open-source-database-tuning-guide-on-xeon-systems.html>)
 
 ## Usage
 
