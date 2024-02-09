@@ -2,9 +2,9 @@
   <img src="https://github.com/intel/terraform-intel-aws-mariadb/blob/main/images/logo-classicblue-800px.png" alt="Intel Logo" width="250"/>
 </p>
 
-# Intel® Cloud Optimization Modules for Terraform
+# Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2022, Intel Corporation
+© Copyright 2024, Intel Corporation
 
 ## AWS RDS MariaDB module - Intel Optimized MariaDB Server VPC Creation Example
 
@@ -12,7 +12,7 @@ Configuration in this directory creates an Amazon RDS instance for MariaDB. The 
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements.
 
-The MariaDB Optimizations were based off [Intel Xeon Tunning guides](<https://www.intel.com/content/www/us/en/developer/articles/guide/open-source-database-tuning-guide-on-xeon-systems.html>)
+The MariaDB Optimizations were based off [Intel Xeon Tuning guides](<https://www.intel.com/content/www/us/en/developer/articles/guide/open-source-database-tuning-guide-on-xeon-systems.html>)
 
 ## Usage
 
