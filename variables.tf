@@ -13,7 +13,7 @@
 variable "instance_class" {
   type        = string
   description = "Instance class that will be used by the RDS instance."
-  default     = "db.m6i.2xlarge"
+  default     = "db.m7i.2xlarge"
 }
 
 variable "db_parameters" {
