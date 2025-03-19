@@ -9,7 +9,7 @@
 
 ## AWS RDS MariaDB module - Intel Optimized MariaDB Server Expanded Parameters Example
 
-Configuration in this directory creates an Amazon RDS instance for MariaDB. The instance is created on an Intel Icelake instance M6i.xlarge by default. The instance is pre-configured with parameters within the database parameter group that is optimized for Intel architecture. The goal of this module is to get you started with a database configured to run best on Intel architecture.
+Configuration in this directory creates an Amazon RDS instance for MariaDB. The instance is created on an Intel Sapphire Rapids db.m7i.2xlarge by default. The instance is pre-configured with parameters within the database parameter group that is optimized for Intel architecture. The goal of this module is to get you started with a database configured to run best on Intel architecture.
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements.
 
@@ -66,7 +66,7 @@ terraform apply
 
 ## Considerations
 
-- Check in the variables.tf file for the region where this database instance will be created. It is defaulted to run in us-west-1 region within AWS. If you want to run it within any other region, make changes accordingly within the Terraform code
+- Check in the variables.tf file for the region where this database instance will be created. It is defaulted to run in us-east-2 region within AWS. If you want to run it within any other region, make changes accordingly within the Terraform code
 
 - Check the variables.tf file for incoming ports allowed to connect to the database instance. The variable name is ingress_cidr_blocks. Currently it is defaulted to be open to the world like 0.0.0.0/0. Before runing the code, configure it based on specific security policies and requirements within the environment it is being implemented
 
