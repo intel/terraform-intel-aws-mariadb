@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2024, Intel Corporation
+© Copyright 2025, Intel Corporation
 
 ## AWS RDS MariaDB module
 
@@ -90,6 +90,13 @@ No modules.
 
 ## Resources
 
+## Links
+
+<https://aws.amazon.com/ec2/instance-types/m6i/>
+
+<https://aws.amazon.com/ec2/instance-types/r6i/>
+
+<https://aws.amazon.com/rds/mariadb/pricing/>
 | Name | Type |
 |------|------|
 | [aws_db_instance.rds](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance) | resource |
